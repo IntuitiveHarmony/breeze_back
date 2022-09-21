@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)rqta8g+k=j$wl2etocfmw96^_t1-58i822r2_=-yqft94$5i9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'git.heroku.com/breeze-machine.git']
+ALLOWED_HOSTS = ['localhost', 'breeze-back.herokuapp.com/']
 
 
 # Application definition
