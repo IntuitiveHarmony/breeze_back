@@ -1,1 +1,1 @@
-web:gunicorn breeze_api.wsgi
+web: gunicorn breeze_back.wsgi
