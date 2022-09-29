@@ -1,5 +1,7 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 # If the model is updated, make sure to update the serializer as well
@@ -30,3 +32,9 @@ class Sequence(models.Model):
     poly2Dist = models.DecimalField(max_digits=3, decimal_places=1, default=0)
     poly2Reverb = models.DecimalField(max_digits=3, decimal_places=1, default=0)
     poly2Delay = models.DecimalField(max_digits=3, decimal_places=1, default=0)
+
+class User(models.Model):
+    email = models.EmailField(max_length=75, unique=True)
+    password = models.CharField(max_length=1000)
+    username = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
+    location = models.CharField(max_length=48)

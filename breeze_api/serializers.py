@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Sequence
+from .models import Sequence, User
 
 class SequenceSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
@@ -32,3 +32,8 @@ class SequenceSerializer(serializers.ModelSerializer): # serializers.ModelSerial
             'poly2Dist',
             'poly2Reverb',
             'poly2Delay',) # tell django which fields to includeSequence
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User 
+        fields = ('id', 'email', 'password', 'username', 'location')
