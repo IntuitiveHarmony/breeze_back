@@ -9,5 +9,4 @@ psycopg2-binary==2.9.3
 pytz==2022.2.1
 sqlparse==0.4.2
 whitenoise==6.2.0
-bcrypt==5.0.1
 bcryptjs==2.4.3
