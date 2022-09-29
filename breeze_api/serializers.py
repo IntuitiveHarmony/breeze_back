@@ -4,9 +4,37 @@ from .models import Sequence, User
 class SequenceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sequence # tell django which model to use
-        fields = ('id', 'name', 'tempo', 'polyCsSteps', 'polyCsSynth', 'polyCsVolume', 'polyCsFilter', 'polyCsDist', 'polyCsReverb', 'polyCsDelay',) # tell django which fields to includeSequence
+        fields = (
+            'id',
+            'name',
+            'tempo',
+            
+            'poly0Steps',
+            'poly0Synth',
+            'poly0Volume',
+            'poly0Filter',
+            'poly0Dist',
+            'poly0Reverb',
+            'poly0Delay',
 
+            'poly1Steps',
+            'poly1Synth',
+            'poly1Volume',
+            'poly1Filter',
+            'poly1Dist',
+            'poly1Reverb',
+            'poly1Delay',
+
+            'poly2Steps',
+            'poly2Synth',
+            'poly2Volume',
+            'poly2Filter',
+            'poly2Dist',
+            'poly2Reverb',
+            'poly2Delay',) # tell django which fields to includeSequence
+    
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User 
         fields = ('id', 'email', 'password', 'username', 'location')
+
