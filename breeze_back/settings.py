@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['localhost', 'breeze-back.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'bcryptjs',
+    'bcrypt',
     'corsheaders',
     'rest_framework',
     'breeze_api',
