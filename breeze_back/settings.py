@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['localhost', 'breeze-back.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'bcryptjs',
     'corsheaders',
     'rest_framework',
     'breeze_api',
@@ -101,12 +100,12 @@ DATABASES['default'].update(db_from_env)
 ############
 # Bcrypt password Hashers
 ############
-PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-    'django.contrib.auth.hashers.Argon2PasswordHasher',
-]
+# PASSWORD_HASHERS = [
+#     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+#     'django.contrib.auth.hashers.Argon2PasswordHasher',
+# ]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
